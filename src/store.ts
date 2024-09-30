@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef } from "react";
 
 export function createStore<T extends object>(initialState: T) {
   const currentState = { ...initialState };
@@ -18,11 +18,11 @@ export function createStore<T extends object>(initialState: T) {
     const [, setState] = useState(0);
     const stateRef = useRef(currentState);
 
-    useCallback(() => {
+    useRef(() => {
       const subscriber = () => setState((c) => c + 1);
       subscribers.add(subscriber);
       return () => subscribers.delete(subscriber);
-    }, [])();
+    }).current();
 
     return [stateRef.current, updateState];
   }
