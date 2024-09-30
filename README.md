@@ -2,6 +2,11 @@
 
 A lightweight state management library for React, inspired by Zustand, built with TypeScript. This library is designed to manage global state with minimal boilerplate and optimal performance.
 
+## Demo
+
+You can check out the live demo here: [Zustand-like React Demo](https://zustand-like-react.vercel.app/)
+
+
 ## Features
 
 - Minimal API for state management.
@@ -21,6 +26,8 @@ A lightweight state management library for React, inspired by Zustand, built wit
   - [Building for Production](#building-for-production)
 - [License](#license)
 
+
+
 ## Installation
 
 First, clone the repository or create a new Vite project using the following command:
@@ -28,14 +35,8 @@ First, clone the repository or create a new Vite project using the following com
 ```bash
 npm create vite@latest
 
-## Installation
-
 First, clone the repository or create a new Vite project using the following command:
-
-```bash
-npm create vite@latest
-
-
+```
 
 ## Usage
 
@@ -52,3 +53,5 @@ interface CounterState {
 
 // Create a store for the counter state
 const useCounterStore = createStore<CounterState>({ count: 0 });
+```
+
